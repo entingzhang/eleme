@@ -15,6 +15,7 @@
 		<quick-list></quick-list>
 		<home-product></home-product>
 		<banner></banner>
+		<top-bar>推荐商家</top-bar>
 		<footer-area></footer-area>
 	</div>
 </template>
@@ -24,6 +25,7 @@
 	import QuickList from "@/components/QuickList.vue";
 	import Banner from "@/components/Banner.vue";
 	import HomeProduct from "@/components/HomeProduct.vue";
+	import TopBar from "@/components/TopBar.vue";
 	import FooterArea from "@/components/FooterArea.vue";
 
 	export default {
@@ -34,6 +36,7 @@
 			Banner,
 			QuickList,
 			HomeProduct,
+			TopBar,
 			FooterArea
 		},
 	}
@@ -80,4 +83,5 @@
 		margin-left: 20%;
 		color: #8E8E93;
 	}
+	
 </style>

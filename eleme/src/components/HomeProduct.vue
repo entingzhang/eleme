@@ -10,14 +10,13 @@
 		</div>
 		<div class="product-right">
 			<div >
-				<h3>品质套餐</h3>
-				<p>搭配齐全吃得好</p>
-				<router-link to="#">立即抢购></router-link>
+				<h3>限量抢购</h3>
+				<p>超值美味9.9元起</p>
+				<router-link to="#"><b>19992人</b>抢购></router-link>
 			</div>
 			<img src="../../public/images/image12.jpg"/>
 		</div>
 	</div>
-	
 </template>
 
 <script>
@@ -75,6 +74,10 @@
 		position: absolute;
 		top: 15px;
 		left: 20px;
+		
+	}
+	.product-right div h3{
+		color: red;
 	}
 	.product-right div h3,
 	.product-right div p{
@@ -84,7 +87,10 @@
 		font-weight: bold;
 		font-size: 14px;
 		text-decoration: none;
-		color: #af8260;
+		color: #000;
+	}
+	.product-right div a b{
+		color: red;
 	}
 	.product-right img{
 		position: absolute;
