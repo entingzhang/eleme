@@ -2,18 +2,18 @@
 	<div class="home">
 		<div class="header">
 			<div class="address">
-				<i class="fa fa-map-marker"></i>
-				<el-select v-model="value8" filterable placeholder="请选择地址：">
-					<el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
-					</el-option>
-				</el-select>
+				<div class="address-area">
+					<i class="fa fa-map-marker"></i><b>未能获取地址...</b><i class="fa fa-caret-down"></i>
+				</div>
 			</div>
 			<div class="search">
-			<i class="fa fa-search"></i><span>搜索饿了么商家、商品名称</span>
-			
+				<div class="search-area">
+					<i class="fa fa-search"></i><span>搜索饿了么商家、商品名称</span>
+				</div>
 			</div>
 		</div>
 		<quick-list></quick-list>
+		<home-product></home-product>
 		<banner></banner>
 		<footer-area></footer-area>
 	</div>
@@ -21,36 +21,20 @@
 
 <script>
 	// @ is an alias to /src
-	import FooterArea from "@/components/FooterArea.vue";
 	import QuickList from "@/components/QuickList.vue";
 	import Banner from "@/components/Banner.vue";
+	import HomeProduct from "@/components/HomeProduct.vue";
+	import FooterArea from "@/components/FooterArea.vue";
 
 	export default {
-		data(){
-			return{
-				 options: [{
-          value: '选项1',
-          label: '浦东新区'
-        }, {
-          value: '选项2',
-          label: '静安区'
-        }, {
-          value: '选项3',
-          label: '黄浦区'
-        }, {
-          value: '选项4',
-          label: '青浦区'
-        }, {
-          value: '选项5',
-          label: '徐汇区'
-        }],
-        value8: ''
-			}
+		data() {
+			return {}
 		},
 		components: {
-			FooterArea,
 			Banner,
-			QuickList
+			QuickList,
+			HomeProduct,
+			FooterArea
 		},
 	}
 </script>
@@ -67,25 +51,33 @@
 		height: 100px;
 		background: linear-gradient(to right, #00A9FF, #0087FF);
 	}
-	.el-select{
-		width: 90%;
-		height: 40px;
-		margin-left: 5%;
+	.header .address {
+		padding: 7px 5%;
 	}
-	i{
-		width: 10%;
+	.address .address-area {
+		width: 100%;
 		color: #FFFFFF;
 	}
-	.search{
-		width: 90%;
-		margin-top: 10px;
-		height: 40px;
+	.address .address-area b{
+		margin: 0px 5px;
+		text-overflow:ellipsis;
+	}
+	.header .search {
+		padding: 7px 5%;
+	}
+	.header .search .search-area{
+		width: 100%;
 		background-color: #FFFFFF;
-		margin-left: 5%;
+		height: 40px;
 		line-height: 40px;
 	}
-	.search span{
+	.search .search-area span {
+		font-size: 12px;
 		color: #8E8E93;
-		margin-left: 30%;
+	}
+	.search .search-area i {
+		margin-right: 5px;
+		margin-left: 20%;
+		color: #8E8E93;
 	}
 </style>

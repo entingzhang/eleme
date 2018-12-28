@@ -1,7 +1,7 @@
 <template>
 	<div class="block">
-		<el-carousel heigh>
-			<el-carousel-item v-for="(item,index) in nav" :key="item.id">
+		<el-carousel height="142px">
+			<el-carousel-item v-for="(item,index) in nav" :key="item.index" >
 				<img :src="item.image" />
 			</el-carousel-item>
 		</el-carousel>
@@ -33,17 +33,10 @@
 
 <style scoped>
 	.block {
-		width: 100px;
+		width: 100%;
 		height: 142px;
-		background-color: red;
+		margin-top: 5px;
 	}
-	.el-carousel__item img{
-		/*width: 100%;*/
-	}
-	
-	
-	
-	
 	/*color: #0087FF;
 	color:#8E8E93 ;*/
 </style>

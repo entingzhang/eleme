@@ -75,7 +75,7 @@
 	}
 	
 	footer ul li span.fa {
-		background-color: red;
+		/*background-color: red;*/
 		height: 10px;
 		font-size: 20px;
 	}

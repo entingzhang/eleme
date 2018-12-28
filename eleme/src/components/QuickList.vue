@@ -1,6 +1,6 @@
 <template>
 	<div class="quick-nav clear">
-		<div class="quick-nav-item" v-for="(item,index) in quicknav">
+		<div class="quick-nav-item" v-for="(item,index) in quicknav" :key="item.index">
 			<router-link to="#">
 				<img :src="item.image" />
 				<span v-text="item.title"></span>
